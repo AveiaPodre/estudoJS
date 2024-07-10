@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula_05</title>
+</head>
+<body>
+    <h1 id="main-title">Variáveis</h1>
+    <p>Estudo de Variáveis</p>
+    <p>Uma variável é um espaço na memória do computador que armazena um valor. 
+        Esse valor pode ser um número, um texto, um objeto, entre outros.
+    </p>
+    <p>Para criar uma variável em JavaScript, utilizamos a palavra-chave var, 
+        seguida do nome da variável e do valor que ela irá armazenar.
+    </p>
+    <p>Exemplo:</p>
+    <p>var numero = 10;</p>
+    <p>var texto = 'Olá, mundo!'</p>
+    <p id="p-nome"></p>
+    <p>Em Js temos como tipos primitivos de dados: string, number, boolean, null, undefined, symbol. 
+        E como tipos de dados compostos: object, array, function.
+    </p>
+    <p>O comando typeof é utilizado para verificar o tipo de uma variável. 
+        Exemplo: typeof numero; // retorna 'number'  
+    </p>
+    <p id="p-type"></p>
+    <script>
+        var nome = prompt('Digite seu nome');
+        // Encontra o elemento pelo ID
+        var elementoNome = document.getElementById('p-nome');
+        // Atualiza o conteúdo do elemento com a variável nome
+        elementoNome.innerHTML = 'nome obtido no prompt: <span class="destaque">' + nome + '</span>';
+
+        var tipoNome = typeof nome;
+        var elementoTipo = document.getElementById('p-type');
+        elementoTipo.innerHTML = 'tipo da variável nome: <span class="destaque">' + tipoNome + '</span>';
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+body {
+    background-color: lightblue;
+}
+h1 {
+    color: red
+}
+.destaque{
+    color: purple;
+    font: normal 50pt Arial sans-serif;
+}
