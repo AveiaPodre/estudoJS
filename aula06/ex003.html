@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel = "stylesheet" href = "style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula_06</title>
+</head>
+<body>
+    <h1 id="main-title">Tratamento de Dados</h1>
+    <p>Nessa aula será vista a manipulação de dados utilizando prompt</p>
+    <p>O sinal de <span>+</span> no contexto de JavaScript pode ser tanto utilizado para soma quanto para
+        concatenação de strings. No caso de soma, ele irá somar os valores das variáveis, e no caso
+        de concatenação, ele irá juntar os valores das variáveis. Para forçar a soma de números, é
+        necessário converter os valores para números antes de realizar a operação, fazendo uso da função
+        <span>Number()</span>.
+    </p>
+    <p><span>Nota:</span> O comando window.prompt() sempre retorna uma string</p>
+    <p>Exemplo:</p>
+    <pre>
+        <code>
+            var n1 = prompt('Digite o primeiro número');
+            var n2 = prompt('Digite o segundo número');
+            var s = n1 + n2; // Aqui s será uma string
+            var s = Number(n1) + Number(n2); // Aqui s será um número
+        </code>
+    </pre>
+    <p id = "p-falso-numero"></p>
+    <p id = "p-numero"></p>
+    <p>
+        Outras maneiras de realizar essa conversão é com os comandos <span>Number.parseInt()</span> e
+        <span>Number.parseFloat()</span>, que convertem para inteiros e decimais, respectivamente.
+    </p>
+    <p>
+        De maneira análoga, para converter um número para string, é possível utilizar o comando
+        <span>String()</span> ou o método <span>toString()</span>.
+    </p>
+    <p>
+        Algumas outras funções notáveis para formatação numérica são <span>toFixed()</span>, que
+        formata um número com uma quantidade específica de casas decimais, e <span>toLocaleString()</span>,
+        que formata um número de acordo com a localidade do usuário. Outro método para mudar um possível ponto
+        por vírgula é o <span>replace()</span>, que substitui um caractere por outro.
+    </p>
+    <p>Exemplo:</p>
+    <pre>
+        <code>
+            var num = 123.456;
+            var numStr = num.toString();
+            var numStr2 = String(num);
+            var numFix = num.toFixed(2);
+            var numLoc = num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+            var numVirg = numLoc.replace('.', ',');
+        </code>
+    </pre>
+    <h2>Formatação de Strings</h2>
+    <p>
+        Para inserir uma variável dentro de uma string é possível utilizar a concatenação, porém, uma
+        maneira mais prática é utilizando <span>template strings</span>, que são strings delimitadas por
+        crases, e que permitem a inserção de variáveis utilizando <span>${}</span>.
+    </p>
+    <p>Exemplo:</p>
+    <pre>
+        <code>
+            var nome = 'João';
+            var idade = 20;
+            var frase = `O ${nome} tem ${idade} anos`;
+        </code>
+    </pre>
+    <p>
+        Alguns outros métodos úteis para manipulação de strings são: <span>length</span>, que retorna o
+        tamanho da string, <span>toUpperCase()</span>, que converte a string para maiúsculas, e
+        <span>toLowerCase()</span>, que converte a string para minúsculas.
+    </p>
+    <p>
+        A função <span>document.write()</span> é utilizada para escrever conteúdo na página, e pode ser utilizada para
+        escrever variáveis, strings, e até mesmo códigos HTML. Porém, seu uso não é recomendado, pois
+        sobrescreve todo o conteúdo da página, e pode causar problemas de compatibilidade. O ideal é
+        utilizar o método <span>innerHTML</span> do objeto <span>document</span>, que permite inserir
+        conteúdo HTML em um elemento específico da página. Outra maneira de inserir conteúdo em um
+        elemento é utilizando o método <span>innerText</span>, que insere apenas texto, sem interpretar
+        tags HTML. Além disso, <span>document.writeln()</span> é utilizado para escrever conteúdo na página quebrando linhas.
+        A tag <span>br/</span> também é utilizada para quebra de linhas no HTML.
+    </p>
+    <script>
+        var n1 = prompt('Digite o primeiro número');
+        var n2 = prompt('Digite o segundo número');
+        var s1 = n1 + n2;
+        var s2 = Number(n1) + Number(n2);
+
+        document.getElementById('p-falso-numero').innerHTML = `A soma <span>errada</span> 
+        de ${n1} e ${n2} é igual a <span class = "destaque">${s1}</span>`;
+        document.getElementById('p-numero').innerHTML = `A soma <span>correta</span> 
+        de ${n1} e ${n2} é igual a <span class = "destaque">${s2}</span>`;
+    </script>
+</body>
+</html>
