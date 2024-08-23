@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula_09</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM</h1>
+    <p>
+        DOM se refere ao Document Object Model, que é uma interface de programação para documentos.
+    </p>
+    <p>
+        O DOM representa o documento como uma árvore de objetos.
+    </p>
+    <p class="para">P1</p>
+    <p class="para">Parágrafo <strong>2</strong></p>
+    <div id="div1"></div>
+    <script>
+        var p1 = document.getElementsByClassName('para')[0]
+        window.document.write(`Conteúdo de p1: ${p1.innerHTML}`)
+        p1.style.color = 'red'
+
+        /*
+        corpo = document.body
+        cor = window.prompt("cor:")
+        corpo.style.background = cor
+        */
+
+        /*
+        var d = document.getElementById('div1')
+        d.style.background = 'green'
+        d.innerHTML = '<strong>Estou esperando</strong>'
+        */
+        
+        var d = document.querySelector('div#div1')
+        d.style.background = 'blue'
+        d.innerHTML = '<strong>Em espera</strong>'
+
+
+    </script>
+</body>
+</html>

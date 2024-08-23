@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula_08</title>
+</head>
+<body>
+    <h1>Operadores(Continuação)</h1>
+    <p>Essa aula é a continuação da última aula de <span>operadores</span> em JavaScript</p>
+    <p>
+        Os operadores em JavaScript são divididos em várias categorias, como aritméticos, de atribuição,
+        de comparação, lógicos, de incremento e decremento, de concatenação, entre outros.
+    </p>
+    <p>Hoje veremos os operadores <span>relacionais</span>, <span>lógicos</span> e <span>ternários</span></p>
+    <h2>Operadores Relacionais</h2>
+    <p>
+        Os operadores relacionais são usados para comparar dois valores. Eles retornam um valor booleano, ou seja,
+        verdadeiro ou falso.
+    </p>
+    <p>Os operadores relacionais são:</p>
+    <ul>
+        <li>== (igual a)</li>
+        <li>!= (diferente de)</li>
+        <li>=== (igual a e do mesmo tipo)</li>
+        <li>!== (diferente de e de tipos diferentes)</li>
+        <li>&gt; (maior que)</li>
+        <li>&lt; (menor que)</li>
+        <li>&gt;= (maior ou igual a)</li>
+        <li>&lt;= (menor ou igual a)</li>
+    </ul>
+    <h2>Operadores Lógicos</h2>
+    <p>
+        Os operadores lógicos são usados para combinar duas ou mais expressões condicionais. Eles retornam um valor
+        booleano, ou seja, verdadeiro ou falso.
+    </p>
+    <p>Os operadores lógicos são:</p>
+    <ul>
+        <li>&& (e)</li>
+        <li>|| (ou)</li>
+        <li>! (negação)</li>
+    </ul>
+    <p>
+        A ordem de precedência dos operadores lógicos é a seguinte: !, &&, ||. Ou seja, primeiro é feita a negação,
+        depois a conjunção e, por último, a disjunção.
+    </p>
+    <h2>Operador Ternário</h2>
+    <p>
+        O operador ternário é um operador condicional que pode ser usado para substituir a estrutura if-else. Ele é
+        composto por três partes: uma expressão condicional, uma expressão que é avaliada se a condição for verdadeira
+        e uma expressão que é avaliada se a condição for falsa.
+    </p>
+    <p>Sua sintaxe é a seguinte:</p>
+    <p>condição ? expressão1 : expressão2</p>
+    <p>Se a condição for verdadeira, a expressão1 é avaliada. Se a condição for falsa, a expressão2 é avaliada.</p>
+    <p>Exemplo:</p>
+    <pre>
+        <code> 
+            var idade = 18;
+            var status = (idade >= 18) ? "Maior de Idade" : "Menor de Idade";
+            console.log(status); //Maior de Idade
+            //Se a idade for maior ou igual a 18, a variável status receberá o valor "Maior de Idade". Caso contrário, ela
+            //receberá o valor "Menor de Idade".
+        </code>
+    </pre>
+</body>
+</html>
